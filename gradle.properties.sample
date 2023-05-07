@@ -1,0 +1,2 @@
+# Relative or Absolute path of kernel api in your file system
+kernel_api_dir = ../../kernel/api
