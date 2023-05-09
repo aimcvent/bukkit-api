@@ -1,16 +1,14 @@
 package fr.aimcvent.bukkit.api;
 
-import fr.aimcvent.bukkit.api.message.MessageComponent;
+import fr.aimcvent.bukkit.api.message.Messages;
+import fr.aimcvent.bukkit.api.translation.Translations;
 import fr.aimcvent.kernel.api.service.Service;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-
-import java.util.List;
 
 public interface BukkitService extends Service {
     Plugin plugin();
 
-    MessageComponent messageOf(Player player);
+    Translations translations();
 
-    MessageComponent messageOf(List<Player> players);
+    Messages messages();
 }
