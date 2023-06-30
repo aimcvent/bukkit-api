@@ -1,3 +1,4 @@
 rootProject.name = 'bukkit-api'
-include ':kernel-api'
-project(':kernel-api').projectDir = new File(ext.getProperty('kernel_api_dir'));
+// Pour le dev en local, utiliser la section ci-dessous
+//include ':kernel-api'
+//project(':kernel-api').projectDir = new File(ext.getProperty('kernel_api_dir'));
