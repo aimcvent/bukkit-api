@@ -1,5 +1,6 @@
 package fr.aimcvent.bukkit.api;
 
+import fr.aimcvent.bukkit.api.command.Commands;
 import fr.aimcvent.bukkit.api.inventory.Inventories;
 import fr.aimcvent.bukkit.api.inventory.item.Items;
 import fr.aimcvent.bukkit.api.inventory.item.Potions;
@@ -20,4 +21,6 @@ public interface BukkitService extends Service {
     Items items();
 
     Potions potions();
+
+    Commands commands();
 }
