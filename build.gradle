@@ -6,6 +6,7 @@ group = 'fr.aimcvent'
 version = '1.0-SNAPSHOT'
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven { url 'https://jitpack.io' }
     maven {
@@ -21,11 +22,13 @@ repositories {
 dependencies {
     // implementation project(':kernel-api');
     // implementation 'com.google.code.gson:gson:2.10.1';
-    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
-    implementation 'com.github.aimcvent:kernel-api:1.0.3'
+
+    compileOnly 'org.spigotmc:spigot:1.20.1-R0.1-SNAPSHOT'
+    implementation 'com.github.aimcvent:kernel-api:1.0.2'
+
 }
 
-def targetJavaVersion = 8
+def targetJavaVersion = 17
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
