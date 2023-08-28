@@ -7,5 +7,7 @@ public interface Argument {
 
     String converter();
 
+    List<ArgumentConstraint<?>> contraints();
+
     List<Argument> children();
 }

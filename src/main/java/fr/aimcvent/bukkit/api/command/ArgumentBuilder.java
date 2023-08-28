@@ -5,6 +5,8 @@ public interface ArgumentBuilder {
 
     ArgumentBuilder converter(String converter);
 
+    <T> ArgumentBuilder constraints(ArgumentConstraint<T>... constraints);
+
     ArgumentBuilder append(ArgumentBuilder... arguments);
 
     Argument build();
