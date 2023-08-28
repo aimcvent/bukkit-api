@@ -6,6 +6,7 @@ import fr.aimcvent.bukkit.api.inventory.item.Items;
 import fr.aimcvent.bukkit.api.inventory.item.Potions;
 import fr.aimcvent.bukkit.api.message.Messages;
 import fr.aimcvent.bukkit.api.proxy.Proxy;
+import fr.aimcvent.bukkit.api.sidebar.Sidebars;
 import fr.aimcvent.bukkit.api.translation.Translations;
 import fr.aimcvent.kernel.api.configuration.WithConfiguration;
 import fr.aimcvent.kernel.api.service.Service;
@@ -27,4 +28,6 @@ public interface BukkitService extends Service, WithConfiguration {
     Commands commands();
 
     Proxy proxy();
+
+    Sidebars sidebars();
 }
