@@ -1,7 +1,9 @@
 package fr.aimcvent.bukkit.api.inventory.item;
 
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
 
@@ -18,6 +20,20 @@ public interface ItemBuilder
     ItemBuilder lore(List<String> lore);
 
     ItemBuilder enchant(Enchantment enchantment, int level);
+
+    ItemBuilder clearEffects();
+
+    ItemBuilder effect(PotionEffectType type, int duration);
+
+    ItemBuilder effect(PotionEffectType type, int duration, int level);
+
+    ItemBuilder effect(PotionEffectType type, int duration, int level, boolean ambient, boolean particles);
+
+    ItemBuilder flags(ItemFlag... itemFlags);
+
+    ItemBuilder owner(String name);
+
+    ItemBuilder textureHead(String texture);
 
     ItemBuilder unbreakable();
 
