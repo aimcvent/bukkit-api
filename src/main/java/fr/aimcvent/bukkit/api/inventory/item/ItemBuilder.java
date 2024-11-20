@@ -3,9 +3,11 @@ package fr.aimcvent.bukkit.api.inventory.item;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public interface ItemBuilder
 {
@@ -36,6 +38,8 @@ public interface ItemBuilder
     ItemBuilder textureHead(String texture);
 
     ItemBuilder unbreakable();
+
+    <T extends ItemMeta> ItemBuilder apply(Consumer<T> consumer);
 
     ItemStack build();
 
