@@ -8,5 +8,7 @@ public interface InventoryBuilder {
 
     InventoryBuilder reload(ReloadInventory<Inventory> reloadConsumer);
 
+    InventoryBuilder updateTime(long second);
+
     Inventory build();
 }

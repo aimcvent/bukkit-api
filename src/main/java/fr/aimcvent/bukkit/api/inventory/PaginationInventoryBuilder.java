@@ -10,5 +10,7 @@ public interface PaginationInventoryBuilder {
 
     PaginationInventoryBuilder translation(Translation translation);
 
+    PaginationInventoryBuilder updateTime(long second);
+
     PaginationInventory build();
 }
