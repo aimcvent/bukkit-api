@@ -19,5 +19,7 @@ public interface Inventory
 
     void click(ClickType clickType, int slot);
 
+    long updateTime();
+
     void open();
 }
