@@ -9,5 +9,7 @@ public interface ArgumentBuilder {
 
     ArgumentBuilder append(ArgumentBuilder... arguments);
 
+    ArgumentBuilder optional();
+
     Argument build();
 }

@@ -33,6 +33,10 @@ public class ItemStackDenormalizer implements Denormalizer<ItemStack, Object> {
             ((Number) map.getOrDefault("count", 1)).intValue()
         );
 
+        if (map.containsKey("name")) {
+            builder.name(map.get("name").toString());
+        }
+
         builder.durability(((Number) map.getOrDefault("durability", 0)).intValue());
 
         if (map.containsKey("lore")) {

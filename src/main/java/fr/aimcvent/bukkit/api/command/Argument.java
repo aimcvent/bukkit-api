@@ -9,5 +9,7 @@ public interface Argument {
 
     List<ArgumentConstraint<?>> contraints();
 
+    boolean optional();
+
     List<Argument> children();
 }
