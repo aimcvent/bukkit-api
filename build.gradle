@@ -21,7 +21,8 @@ repositories {
 dependencies {
     implementation 'com.google.code.gson:gson:2.10.1';
     compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
-    implementation 'com.github.aimcvent:kernel-api:1.0.5'
+    implementation 'com.github.aimcvent:kernel-api:1.0.6'
+    implementation 'com.github.aimcvent:player-api:1.0.3'
 }
 
 def targetJavaVersion = 8

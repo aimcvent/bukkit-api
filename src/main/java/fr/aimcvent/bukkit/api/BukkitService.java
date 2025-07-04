@@ -7,6 +7,7 @@ import fr.aimcvent.bukkit.api.inventory.Inventories;
 import fr.aimcvent.bukkit.api.inventory.item.Items;
 import fr.aimcvent.bukkit.api.inventory.item.Potions;
 import fr.aimcvent.bukkit.api.message.Messages;
+import fr.aimcvent.bukkit.api.player.Players;
 import fr.aimcvent.bukkit.api.proxy.Proxy;
 import fr.aimcvent.bukkit.api.sidebar.Sidebars;
 import fr.aimcvent.bukkit.api.title.Titles;
@@ -39,4 +40,6 @@ public interface BukkitService extends Service, WithConfiguration {
     Hotbars hotbars();
 
     Entities entities();
+
+    Players players();
 }
