@@ -1,5 +1,7 @@
 package fr.aimcvent.bukkit.api.command;
 
+import fr.aimcvent.player.api.rank.Permission;
+
 public interface ConfigurationBuilder {
 
     ConfigurationBuilder name(String name);
@@ -7,6 +9,8 @@ public interface ConfigurationBuilder {
     ConfigurationBuilder description(String description);
 
     ConfigurationBuilder usage(String usage);
+
+    ConfigurationBuilder permission(Permission permission);
 
     ConfigurationBuilder permission(String permission);
 
