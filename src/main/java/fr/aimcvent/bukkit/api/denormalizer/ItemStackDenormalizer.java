@@ -11,6 +11,7 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 public class ItemStackDenormalizer implements Denormalizer<ItemStack, Object> {
 
@@ -103,6 +104,24 @@ public class ItemStackDenormalizer implements Denormalizer<ItemStack, Object> {
             builder.unbreakable();
         }
 
+        if (map.containsKey("canDestroy")) {
+            this.applyToTag((List<String>) map.get("canDestroy"), builder::canDestroy);
+        }
+
+        if (map.containsKey("canPlaceOn")) {
+            this.applyToTag((List<String>) map.get("canPlaceOn"), builder::canPlaceOn);
+        }
+
         return builder.build();
+    }
+
+    private void applyToTag(List<String> values, Consumer<String> consumer) {
+        for (final String value : values) {
+            if (value.startsWith("minecraft:")) {
+                consumer.accept(value);
+                continue;
+            }
+            consumer.accept("minecraft:" + Material.valueOf(value.toUpperCase()).name().toLowerCase());
+        }
     }
 }
