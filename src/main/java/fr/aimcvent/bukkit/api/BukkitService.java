@@ -10,6 +10,7 @@ import fr.aimcvent.bukkit.api.message.Messages;
 import fr.aimcvent.bukkit.api.player.Players;
 import fr.aimcvent.bukkit.api.proxy.Proxy;
 import fr.aimcvent.bukkit.api.sidebar.Sidebars;
+import fr.aimcvent.bukkit.api.tab.TabListSender;
 import fr.aimcvent.bukkit.api.title.Titles;
 import fr.aimcvent.bukkit.api.translation.Translations;
 import fr.aimcvent.kernel.api.configuration.WithConfiguration;
@@ -42,4 +43,6 @@ public interface BukkitService extends Service, WithConfiguration {
     Entities entities();
 
     Players players();
+
+    TabListSender tabListOf(Service service);
 }

@@ -1,5 +1,6 @@
 package fr.aimcvent.bukkit.api.inventory.item;
 
+import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -40,6 +41,14 @@ public interface ItemBuilder
     ItemBuilder unbreakable();
 
     <T extends ItemMeta> ItemBuilder apply(Consumer<T> consumer);
+
+    ItemBuilder canPlaceOn(String material);
+
+    ItemBuilder canPlaceOn(Material material);
+
+    ItemBuilder canDestroy(String material);
+
+    ItemBuilder canDestroy(Material material);
 
     ItemStack build();
 
