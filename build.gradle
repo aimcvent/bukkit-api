@@ -10,7 +10,7 @@ repositories {
     maven { url 'https://jitpack.io' }
     maven {
         name = 'spigotmc-repo'
-        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+        url = 'https://hub.spigotmc.org/nexus/content/groups/public/'
     }
     maven {
         name = 'sonatype'
