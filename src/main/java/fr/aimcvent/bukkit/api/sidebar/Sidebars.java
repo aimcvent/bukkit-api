@@ -32,7 +32,5 @@ public interface Sidebars {
 
     Sidebar create(Player player, String title, boolean update);
 
-    void reload(Player player);
-
     void destroy(Player player);
 }

@@ -8,4 +8,6 @@ public interface Sidebar {
     void reload();
 
     void clear();
+
+    void enabled(boolean enabled);
 }
